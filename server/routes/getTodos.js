@@ -1,6 +1,7 @@
 const headers = require('../headers');
 const router = function (res, todos) {
-  res.writeHead(200, headers);
+  res.writeHead(200, headers());
+  console.log(headers());
   res.write(
     JSON.stringify({
       status: 'success',

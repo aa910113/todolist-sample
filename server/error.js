@@ -1,6 +1,6 @@
 const headers = require('./headers');
 function errorHandle(res) {
-  res.writeHead(400, headers(200));
+  res.writeHead(400, headers());
   res.write(
     JSON.stringify({
       status: 'error',

@@ -6,7 +6,7 @@ const router = function (res, todos, url) {
   const index = todos.findIndex((el) => el.id == id);
   if (index !== -1) {
     todos.splice(index, 1);
-    res.writeHead(200, headers);
+    res.writeHead(200, headers());
     res.write(
       JSON.stringify({
         status: 'success',

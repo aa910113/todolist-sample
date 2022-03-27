@@ -11,7 +11,7 @@ const router = function (res, todos, body) {
         id: uuidv4(),
       };
       todos.push(todo);
-      res.writeHead(200, headers);
+      res.writeHead(200, headers());
       res.write(
         JSON.stringify({
           status: 'success',

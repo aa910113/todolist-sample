@@ -34,7 +34,7 @@ const server = http.createServer((req, res) => {
       patchTodo(res, todos, body, req.url);
     });
   } else if (req.method == 'OPTIONS') {
-    res.writeHead(200, headers);
+    res.writeHead(200, headers());
     res.end();
   } else {
     res.writeHead(404, headers(404));
