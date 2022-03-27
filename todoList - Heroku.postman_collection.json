@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "43c1540f-0497-411d-98c7-33670f9f0ae4",
+		"name": "todoList - Heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取的所有代辦",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://frozen-cliffs-16972.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"frozen-cliffs-16972",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增代辦",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"正在吃魷魚絲\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://frozen-cliffs-16972.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"frozen-cliffs-16972",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有代辦",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://frozen-cliffs-16972.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"frozen-cliffs-16972",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆代辦",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://frozen-cliffs-16972.herokuapp.com/todos/d6e449bd-0be1-4f23-aae7-e1f2d913d2a3",
+					"protocol": "https",
+					"host": [
+						"frozen-cliffs-16972",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos",
+						"d6e449bd-0be1-4f23-aae7-e1f2d913d2a3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯單筆代辦",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"修改過\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://frozen-cliffs-16972.herokuapp.com/todos/fbe1865f-1b7d-4386-becc-6120aec215fc",
+					"protocol": "https",
+					"host": [
+						"frozen-cliffs-16972",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos",
+						"fbe1865f-1b7d-4386-becc-6120aec215fc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
