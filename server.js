@@ -75,15 +75,16 @@ const requestListener = (req, res) => {
     } else {
       errHandle(res);
     }
-  } else if (req.url == '/todos' && req.method == 'PATCH') {
+  } else if (req.url.startsWith('/todos/') && req.method == 'PATCH') {
     req.on('end', () => {
       try {
         const todo = JSON.parse(body).title;
         const id = req.url.split('/').pop();
         const index = todos.findIndex((el) => el.id === id);
+        console.log(todo);
 
         if (todo !== undefined && index !== -1) {
-          todo[index].title = todo;
+          todos[index].title = todo;
           res.writeHead(200, headers);
           res.write(
             JSON.stringify({
